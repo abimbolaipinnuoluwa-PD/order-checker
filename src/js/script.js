@@ -9,26 +9,16 @@ const menu = [
 
 for (let i = 0; i < menu.length; i++) {
     let quantity = parseInt(prompt(`How many ${menu[i].itemName} do you want? `));
-    
-    if (!isNaN(quantity)) {
+    // console.log(quantity); 
+     
+        // if (quantity !== null && quantity !== "" && quantity >= 0) {
+        if (!isNaN(quantity)) {
         let itemTotal = quantity * menu[i].price;
         console.log(`The total cost for ${menu[i].itemName} is ₦${itemTotal}`);
-        // alert(`The total cost for ${menu[i].itemName} is ₦${itemTotal}`);
-        // alert(`The total cost for ${quantity} ${menu[i].name}(s) is ₦${itemTotal}`);
+        
     } else {
         console.log("Invalid quantity entered.");
-        // or
         alert(menu[4]);
         alert("Please enter a valid number.");
     }
 }
-
-//or if I use alert with index.html - I didn't get it to work correctly
-// let text = document.querySelector("#order")
-// text.innerHTML = "Hello, User";
-// console.log(text.innerHTML);
-
-// let nextParagraph = document.createElement("order")
-// nextParagraph.innerHTML = "Hello, Universe";
-// text.appendChild(nextParagraph);
-// console.log(nextParagraph);
